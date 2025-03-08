@@ -1,0 +1,33 @@
+/**
+    Mobile First: 
+    ---- how to using -----
+    selector {
+        base scss;
+
+        @include lg {}
+        @include md {}
+        @include sm {}
+    }
+
+    ---- flow code ----
+    Base css is prioritize. When screen better lg (1366px) then lg responsive is effective 
+    max-width: screen > value
+*/
+
+@mixin sm {
+    @media (min-width: 738px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 1366px) {
+        @content;
+    }
+}
